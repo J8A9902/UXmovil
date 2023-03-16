@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.alarmux.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.alarmux.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+        <action
+            android:id="@+id/action_SecondFragment_to_grupos_list"
+            app:destination="@id/grupos_list" />
+        <argument
+            android:name="phone"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/grupos_list"
+        android:name="com.example.alarmux.grupos_list"
+        android:label="fragment_grupos_list"
+        tools:layout="@layout/fragment_grupos_list" >
+        <argument
+            android:name="phone"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_grupos_list_to_createGrupo"
+            app:destination="@id/createGrupo" />
+        <action
+            android:id="@+id/action_grupos_list_to_modifyGrupo"
+            app:destination="@id/modifyGrupo" />
+        <action
+            android:id="@+id/action_grupos_list_to_deleteGrupoFragment"
+            app:destination="@id/deleteGrupoFragment" />
+        <action
+            android:id="@+id/action_grupos_list_to_alarmasList"
+            app:destination="@id/alarmasList" />
+    </fragment>
+    <fragment
+        android:id="@+id/createGrupo"
+        android:name="com.example.alarmux.CreateGrupo"
+        android:label="fragment_create_grupo"
+        tools:layout="@layout/fragment_create_grupo" >
+        <action
+            android:id="@+id/action_createGrupo_to_grupos_list"
+            app:destination="@id/grupos_list" />
+    </fragment>
+    <fragment
+        android:id="@+id/modifyGrupo"
+        android:name="com.example.alarmux.ModifyGrupo"
+        android:label="fragment_modify_grupo"
+        tools:layout="@layout/fragment_modify_grupo" >
+        <action
+            android:id="@+id/action_modifyGrupo_to_grupos_list"
+            app:destination="@id/grupos_list" />
+    </fragment>
+    <fragment
+        android:id="@+id/deleteGrupoFragment"
+        android:name="com.example.alarmux.DeleteGrupoFragment"
+        android:label="fragment_delete_grupo"
+        tools:layout="@layout/fragment_delete_grupo" >
+        <action
+            android:id="@+id/action_deleteGrupoFragment_to_grupos_list"
+            app:destination="@id/grupos_list" />
+    </fragment>
+    <fragment
+        android:id="@+id/alarmasList"
+        android:name="com.example.alarmux.AlarmasList"
+        android:label="fragment_alarmas_list"
+        tools:layout="@layout/fragment_alarmas_list" >
+        <action
+            android:id="@+id/action_alarmasList_to_grupos_list"
+            app:destination="@id/grupos_list" />
+        <action
+            android:id="@+id/action_alarmasList_to_createAlarma"
+            app:destination="@id/createAlarma" />
+        <action
+            android:id="@+id/action_alarmasList_to_modifyAlarma"
+            app:destination="@id/modifyAlarma" />
+        <action
+            android:id="@+id/action_alarmasList_to_deleteAlarma"
+            app:destination="@id/deleteAlarma" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAlarma"
+        android:name="com.example.alarmux.CreateAlarma"
+        android:label="fragment_create_alarma"
+        tools:layout="@layout/fragment_create_alarma" >
+        <action
+            android:id="@+id/action_createAlarma_to_alarmasList"
+            app:destination="@id/alarmasList" />
+    </fragment>
+    <fragment
+        android:id="@+id/modifyAlarma"
+        android:name="com.example.alarmux.ModifyAlarma"
+        android:label="fragment_modify_alarma"
+        tools:layout="@layout/fragment_modify_alarma" >
+        <action
+            android:id="@+id/action_modifyAlarma_to_alarmasList"
+            app:destination="@id/alarmasList" />
+    </fragment>
+    <fragment
+        android:id="@+id/deleteAlarma"
+        android:name="com.example.alarmux.deleteAlarma"
+        android:label="fragment_delete_alarma"
+        tools:layout="@layout/fragment_delete_alarma" >
+        <action
+            android:id="@+id/action_deleteAlarma_to_alarmasList"
+            app:destination="@id/alarmasList" />
+    </fragment>
+</navigation>

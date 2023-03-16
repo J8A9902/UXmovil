@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateAlarma">
+    <ImageView
+        android:id="@+id/imAlarmas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:src="@drawable/alarmas"
+        android:contentDescription="Titulo Alarmas"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="20dp"
+        />
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp"
+        android:text="31648420210"
+        />
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imAlarmas"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="30dp"
+        android:id="@+id/cvGrupo"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="50dp">
+
+            <TextView
+                android:id="@+id/grupoTittle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Crear Alarma"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Nombre: "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/grupoTittle"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <EditText
+                android:layout_marginTop="10dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/edName"
+                android:hint="Digite Nombre"
+                android:textColorHint="#CCCCCC"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvName"
+                app:layout_constraintTop_toBottomOf="@id/grupoTittle" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hora"
+                app:layout_constraintTop_toBottomOf="@+id/edName"
+                app:layout_constraintEnd_toStartOf="@+id/edPuntos"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="70dp"
+                android:id="@+id/imHora"
+                android:minHeight="60dp"
+                android:contentDescription="Cuadre de hora"
+                >
+            </ImageView>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edHora1"
+                android:hint="00"
+                android:inputType="number"
+                android:textColorHint="#247179"
+                app:layout_constraintStart_toStartOf="@id/imHora"
+                app:layout_constraintEnd_toEndOf="@+id/imHora"
+                android:textSize="50dp"
+                app:layout_constraintTop_toTopOf="@id/imHora"
+                app:layout_constraintBottom_toBottomOf="@id/imHora"/>
+            <EditText
+                android:layout_marginHorizontal="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edPuntos"
+                android:hint=":"
+                android:textColorHint="#247179"
+                app:layout_constraintStart_toEndOf="@id/edHora1"
+                app:layout_constraintEnd_toStartOf="@id/imHora2"
+                android:textSize="60dp"
+                app:layout_constraintTop_toTopOf="@id/imHora"
+                app:layout_constraintBottom_toBottomOf="@id/imHora"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hora"
+                app:layout_constraintTop_toBottomOf="@+id/edName"
+                app:layout_constraintStart_toEndOf="@+id/edPuntos"
+                android:id="@+id/imHora2"
+                android:minHeight="60dp"
+                android:contentDescription="Cuadre de hora"
+                >
+            </ImageView>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edHora2"
+                android:hint="00"
+                android:inputType="number"
+                android:textColorHint="#247179"
+                app:layout_constraintStart_toStartOf="@id/imHora2"
+                app:layout_constraintEnd_toEndOf="@+id/imHora2"
+                android:textSize="50dp"
+                app:layout_constraintTop_toTopOf="@id/imHora2"
+                app:layout_constraintBottom_toBottomOf="@id/imHora2"/>
+
+            <TextView
+                android:id="@+id/tvPrioridad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Prioridad: "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imHora"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:layout_margin="10dp"
+                android:id="@+id/imPriori1"
+                android:src="@drawable/prioridad"
+                app:layout_constraintTop_toTopOf = "@id/tvPrioridad"
+                app:layout_constraintBottom_toBottomOf="@id/tvPrioridad"
+                app:layout_constraintStart_toEndOf="@id/tvPrioridad"
+                />
+            <TextView
+                android:id="@+id/tvPriori1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/imPriori1"
+                app:layout_constraintBottom_toBottomOf="@id/imPriori1"
+                app:layout_constraintStart_toStartOf="@id/imPriori1"
+                app:layout_constraintEnd_toEndOf="@id/imPriori1"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:layout_margin="10dp"
+                android:id="@+id/imPriori2"
+                android:src="@drawable/prioridad"
+                app:layout_constraintTop_toTopOf = "@id/tvPrioridad"
+                app:layout_constraintBottom_toBottomOf="@id/tvPrioridad"
+                app:layout_constraintStart_toEndOf="@id/imPriori1"
+                />
+            <TextView
+                android:id="@+id/tvPriori2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/imPriori2"
+                android:layout_margin="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/imPriori2"
+                app:layout_constraintStart_toStartOf="@id/imPriori2"
+                app:layout_constraintEnd_toEndOf="@id/imPriori2"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:layout_margin="10dp"
+                android:id="@+id/imPriori3"
+                android:src="@drawable/prioridad"
+                app:layout_constraintTop_toTopOf = "@id/tvPrioridad"
+                app:layout_constraintBottom_toBottomOf="@id/tvPrioridad"
+                app:layout_constraintStart_toEndOf="@id/imPriori2"
+                />
+            <TextView
+                android:id="@+id/tvPriori3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/imPriori3"
+                app:layout_constraintBottom_toBottomOf="@id/imPriori3"
+                app:layout_constraintStart_toStartOf="@id/imPriori3"
+                app:layout_constraintEnd_toEndOf="@id/imPriori3"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:layout_margin="10dp"
+                android:id="@+id/imPriori4"
+                android:src="@drawable/prioridad"
+                app:layout_constraintTop_toTopOf = "@id/tvPrioridad"
+                app:layout_constraintBottom_toBottomOf="@id/tvPrioridad"
+                app:layout_constraintStart_toEndOf="@id/imPriori3"
+                />
+            <TextView
+                android:id="@+id/tvPriori4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/imPriori4"
+                app:layout_constraintBottom_toBottomOf="@id/imPriori4"
+                app:layout_constraintStart_toStartOf="@id/imPriori4"
+                app:layout_constraintEnd_toEndOf="@id/imPriori4"
+                android:text="4"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imPriori5"
+                android:src="@drawable/prioridad"
+                app:layout_constraintTop_toTopOf = "@id/tvPrioridad"
+                app:layout_constraintBottom_toBottomOf="@id/tvPrioridad"
+                app:layout_constraintStart_toEndOf="@id/imPriori4"
+                />
+            <TextView
+                android:id="@+id/tvPriori5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/imPriori5"
+                app:layout_constraintBottom_toBottomOf="@id/imPriori5"
+                app:layout_constraintStart_toStartOf="@id/imPriori5"
+                app:layout_constraintEnd_toEndOf="@id/imPriori5"
+                android:text="5"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                />
+
+            <TextView
+                android:id="@+id/tvPeriodicidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Periodicidad"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPriori5"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:layout_margin="10dp"
+                android:id="@+id/imPeriodD"
+                android:src="@drawable/prioridad"
+                app:layout_constraintTop_toBottomOf = "@id/tvPeriodicidad"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+            <TextView
+                android:id="@+id/tvPeriodD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/imPeriodD"
+                app:layout_constraintBottom_toBottomOf="@id/imPeriodD"
+                app:layout_constraintStart_toStartOf="@id/imPeriodD"
+                app:layout_constraintEnd_toEndOf="@id/imPeriodD"
+                android:text="D"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:layout_margin="10dp"
+                android:id="@+id/imPeriodL"
+                android:src="@drawable/prioridad"
+                app:layout_constraintTop_toBottomOf = "@id/tvPeriodicidad"
+                app:layout_constraintStart_toEndOf="@+id/imPeriodD"
+                />
+            <TextView
+                android:id="@+id/tvPeriodL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/imPeriodL"
+                app:layout_constraintBottom_toBottomOf="@id/imPeriodL"
+                app:layout_constraintStart_toStartOf="@id/imPeriodL"
+                app:layout_constraintEnd_toEndOf="@id/imPeriodL"
+                android:text="L"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:layout_margin="10dp"
+                android:id="@+id/imPeriodM"
+                android:src="@drawable/prioridad"
+                app:layout_constraintTop_toBottomOf = "@id/tvPeriodicidad"
+                app:layout_constraintStart_toEndOf="@+id/imPeriodL"
+                />
+            <TextView
+                android:id="@+id/tvPeriodM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/imPeriodM"
+                app:layout_constraintBottom_toBottomOf="@id/imPeriodM"
+                app:layout_constraintStart_toStartOf="@id/imPeriodM"
+                app:layout_constraintEnd_toEndOf="@id/imPeriodM"
+                android:text="M"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:layout_margin="10dp"
+                android:id="@+id/imPeriodX"
+                android:src="@drawable/prioridad"
+                app:layout_constraintTop_toBottomOf = "@id/tvPeriodicidad"
+                app:layout_constraintStart_toEndOf="@+id/imPeriodM"
+                />
+            <TextView
+                android:id="@+id/tvPeriodX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/imPeriodX"
+                app:layout_constraintBottom_toBottomOf="@id/imPeriodX"
+                app:layout_constraintStart_toStartOf="@id/imPeriodX"
+                app:layout_constraintEnd_toEndOf="@id/imPeriodX"
+                android:text="X"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:layout_margin="10dp"
+                android:id="@+id/imPeriodJ"
+                android:src="@drawable/prioridad"
+                app:layout_constraintTop_toBottomOf = "@id/tvPeriodicidad"
+                app:layout_constraintStart_toEndOf="@+id/imPeriodX"
+                />
+            <TextView
+                android:id="@+id/tvPeriodJ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/imPeriodJ"
+                app:layout_constraintBottom_toBottomOf="@id/imPeriodJ"
+                app:layout_constraintStart_toStartOf="@id/imPeriodJ"
+                app:layout_constraintEnd_toEndOf="@id/imPeriodJ"
+                android:text="J"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:layout_margin="10dp"
+                android:id="@+id/imPeriodV"
+                android:src="@drawable/prioridad"
+                app:layout_constraintTop_toBottomOf = "@id/tvPeriodicidad"
+                app:layout_constraintStart_toEndOf="@+id/imPeriodJ"
+                />
+            <TextView
+                android:id="@+id/tvPeriodV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/imPeriodV"
+                app:layout_constraintBottom_toBottomOf="@id/imPeriodV"
+                app:layout_constraintStart_toStartOf="@id/imPeriodV"
+                app:layout_constraintEnd_toEndOf="@id/imPeriodV"
+                android:text="V"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:layout_margin="10dp"
+                android:id="@+id/imPeriodS"
+                android:src="@drawable/prioridad"
+                app:layout_constraintTop_toBottomOf = "@id/tvPeriodicidad"
+                app:layout_constraintStart_toEndOf="@+id/imPeriodV"
+                />
+            <TextView
+                android:id="@+id/tvPeriodS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/imPeriodS"
+                app:layout_constraintBottom_toBottomOf="@id/imPeriodS"
+                app:layout_constraintStart_toStartOf="@id/imPeriodS"
+                app:layout_constraintEnd_toEndOf="@id/imPeriodS"
+                android:text="S"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                />
+
+            <TextView
+                android:id="@+id/tvSonido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="Sonido: "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imPeriodD"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <EditText
+                android:layout_marginTop="10dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/edSonido"
+                android:hint="Digite Sonido"
+                android:textColorHint="#CCCCCC"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvSonido"
+                app:layout_constraintTop_toBottomOf="@id/imPeriodD" />
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Cancelar"
+                android:textSize="10dp"
+                android:backgroundTint="#FF0000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edSonido"
+                app:layout_constraintEnd_toStartOf="@+id/btnCrear"/>
+            <Button
+                android:id="@+id/btnCrear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Crear"
+                android:textSize="10dp"
+                android:backgroundTint="#008000"
+                app:layout_constraintStart_toEndOf="@id/btnCancelar"
+                app:layout_constraintTop_toBottomOf="@id/edSonido"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

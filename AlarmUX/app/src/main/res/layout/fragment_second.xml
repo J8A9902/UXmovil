@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondFragment">
+    <ImageView
+        android:id="@+id/imReloj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="150dp"
+        android:minWidth="150dp"
+        android:src="@mipmap/logo"
+        android:contentDescription="Imagen Reloj"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="130dp"
+        />
+    <ImageView
+        android:id="@+id/imLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:src="@drawable/alarm_ux"
+        android:contentDescription="Logo ALARM UX"
+        app:layout_constraintTop_toBottomOf="@+id/imReloj"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <TextView
+        android:id="@+id/textview_first"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Se ha enviado un mensaje de texto a su teléfono"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imLogo"/>
+    <EditText
+        android:layout_margin="20dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/edPhone"
+        android:hint="Digite el código"
+        android:inputType="number"
+        android:textColorHint="#CCCCCC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_first">
+
+    </EditText>
+
+
+    <Button
+        android:layout_margin="20dp"
+        android:id="@+id/button_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edPhone"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
